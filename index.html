@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" style="--status-bar-height: 0px; --top-window-height: 0px; --window-left: 0px; --window-right: 0px; --window-margin: 0px; --window-top: calc(var(--top-window-height) + 0px); --window-bottom: 0px;"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ภารกิจแชร์หนัง</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
+  <link rel="stylesheet" href="/static/index.css">
+<style type="text/css">
+
+<style type="text/css">
+      .uni-app--showtabbar .uni-page-wrapper {
+              display: block;
+              height: calc(100% - 50px);
+              height: calc(100% - 50px - constant(safe-area-inset-bottom));
+              height: calc(100% - 50px - env(safe-area-inset-bottom));
+            }
+.uni-app--showtabbar .uni-page-wrapper::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 50px;
+            height: calc(50px + constant(safe-area-inset-bottom));
+            height: calc(50px + env(safe-area-inset-bottom));
+          }
+.uni-app--showtabbar .uni-page-head [uni-page-head-type="default"] ~ uni-page-wrapper {
+            height: calc(100% - 44px - 50px);
+            height: calc(100% - 44px - constant(safe-area-inset-top) - 50px - constant(safe-area-inset-bottom));
+            height: calc(100% - 44px - env(safe-area-inset-top) - 50px - env(safe-area-inset-bottom));
+          }</style>
+          
+          <style type="text/css">
+          
+.u-count-num[data-v-5ee53a60] {
+display: inline-flex;
+text-align: center;
+}
+</style>
+
+<style type="text/css">
+.b-card[data-v-6582d7dc] {
+margin: 15px;
+padding: 15px;
+background-color: #FFFFFF;
+border-radius: 5px;
+box-shadow: 1px 1px 5px #C0C0C0;
+}
+.b-flex-space[data-v-6582d7dc] {
+display: flex;
+justify-content: space-between;
+}
+.b-fontw[data-v-6582d7dc] {
+font-weight: 600;
+}
+@-webkit-keyframes middles-data-v-6582d7dc {
+from {
+-webkit-transform: scale(1);
+      transform: scale(1);
+}
+to {
+-webkit-transform: scale(0);
+      transform: scale(0);
+}
+}
+@keyframes middles-data-v-6582d7dc {
+from {
+-webkit-transform: scale(1);
+      transform: scale(1);
+}
+to {
+-webkit-transform: scale(0);
+      transform: scale(0);
+}
+}
+.addAnimation[data-v-6582d7dc] {
+-webkit-animation: middles-data-v-6582d7dc 0.5s linear;
+    animation: middles-data-v-6582d7dc 0.5s linear;
+}
+.warp .exchange-box[data-v-6582d7dc] {
+color: #F1F1F1;
+padding: 45px 0 0 0;
+background-image: url("https://cdn.zhoukaiwen.com/zjx_me_bg5.jpeg");
+width: 1115px;
+height: 275px;
+}
+.warp .exchange-box .title[data-v-6582d7dc] {
+display: flex;
+height: 40px;
+align-items: center;
+font-size: 16px;
+font-weight: 600;
+}
+.warp .exchange-box .title .exchange-btn {
+margin-left: 10px;
+padding: 2px 10px;
+font-size: 12px;
+background-color: #999999;
+border-radius: 20px;
+color: #FFFFFF;
+opacity: 0.8;
+}
+.warp .exchange-box .content[data-v-6582d7dc] {
+height: 135px;
+margin-top: 20px;
+position: relative;
+}
+.warp .exchange-box .content .sign-box[data-v-6582d7dc] {
+position: absolute;
+left: 10px;
+top: 15px;
+}
+.warp .exchange-box .content .sign-box .sign-content[data-v-6582d7dc] {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.warp .exchange-box .content .sign-box .sign-content .sign-title[data-v-6582d7dc] {
+font-size: 14px;
+}
+.warp .exchange-box .content .sign-box .sign-content .sign-garden[data-v-6582d7dc] {
+width: 35px;
+height: 35px;
+border-radius: 50%;
+color: #444a62;
+font-weight: 600;
+background-color: rgba(255, 255, 255, 0.9);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.warp .exchange-box .content .footer-box[data-v-6582d7dc] {
+position: absolute;
+bottom: 0;
+left: 50%;
+margin-left: -35px;
+}
+.warp .exchange-box .content .footer-box .footer-outer[data-v-6582d7dc] {
+width: 70px;
+height: 70px;
+padding: 5px;
+box-sizing: border-box;
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.warp .exchange-box .content .footer-box .footer-outer .footer-inside[data-v-6582d7dc] {
+width: 100%;
+height: 100%;
+background-color: rgba(255, 255, 255, 0.9);
+border-radius: 50%;
+display: flex;
+font-size: 14px;
+color: #444a62;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.warp .signIn-box .signIn-heard[data-v-6582d7dc] {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.warp .signIn-box .signIn-heard .title[data-v-6582d7dc] {
+height: 40px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.warp .signIn-box .signIn-heard .title .title-today[data-v-6582d7dc] {
+font-size: 16px;
+}
+.warp .signIn-box .signIn-heard .title .title-tomorrow[data-v-6582d7dc] {
+font-size: 12px;
+color: #C0C0C0;
+}
+.warp .signIn-box .signIn-heard .total[data-v-6582d7dc] {
+height: 35px;
+font-size: 16px;
+padding: 0 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+border: 1px solid #C0C0C0;
+}
+.warp .signIn-box .signIn-heard .total .img[data-v-6582d7dc] {
+width: 30px;
+height: 30px;
+margin-right: 5px;
+}
+.warp .signIn-box .signIn-content .item[data-v-6582d7dc] {
+width: calc( 50% - 5px);
+}
+.warp .signIn-box .signIn-content .item .img[data-v-6582d7dc] {
+height: 30px;
+width: 30px;
+margin: 3px 0;
+}
+.warp .signIn-box .signIn-content .item-flex[data-v-6582d7dc] {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.warp .signIn-box .signIn-content .card[data-v-6582d7dc] {
+height: 90px;
+padding: 7px 12px;
+box-sizing: border-box;
+background-color: #f5f6fa;
+border-radius: 5px;
+margin-top: 10px;
+}
+.warp .signIn-box .signIn-content .card .title[data-v-6582d7dc] {
+font-size: 14px;
+}
+.warp .signIn-box .signIn-content .card .describe[data-v-6582d7dc] {
+font-size: 10px;
+color: #C0C0C0;
+}
+.warp .signIn-box .signIn-content .card-check[data-v-6582d7dc] {
+color: #FFFFFF;
+background-color: #00c657;
+}
+.warp .signIn-box .signIn-content .card-check .describe[data-v-6582d7dc] {
+color: #FFFFFF;
+}
+.warp .task-box .title[data-v-6582d7dc] {
+font-size: 16px;
+}
+.warp .task-box .task-item[data-v-6582d7dc] {
+margin: 30px 0;
+align-items: center;
+}
+.warp .task-box .task-item .task-item-left[data-v-6582d7dc] {
+align-items: center;
+}
+.warp .task-box .task-item .task-item-left .task-item-icon[data-v-6582d7dc] {
+width: 30px;
+height: 30px;
+}
+.warp .task-box .task-item .task-item-left .task-item-describe[data-v-6582d7dc] {
+height: 40px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+margin-left: 15px;
+}
+.warp .task-box .task-item .task-item-left .task-item-describe .title[data-v-6582d7dc] {
+font-size: 14px;
+}
+.warp .task-box .task-item .task-item-left .task-item-describe .text[data-v-6582d7dc] {
+font-size: 10px;
+color: #C0C0C0;
+}
+.warp .task-box .task-item .task-item-btn[data-v-6582d7dc] {
+width: 80px;
+color: #FFFFFF;
+padding: 5px 10px;
+font-size: 14px;
+font-weight: 600;
+background-image: linear-gradient(to top right, #06c852, #66e805);
+box-shadow: 1px 1px 5px #f5f6fa;
+border-radius: 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.warp .task-box .task-item .task-item-btn .img[data-v-6582d7dc] {
+width: 20px;
+height: 20px;
+}
+</style>
+
+</head>
+
+<body >
+
+<uni-view class="warp">
+      <uni-view class="exchange-box">
+            <uni-view data-v-6582d7dc="" class="title">
+                  <uni-view data-v-6582d7dc="" class="footer-box">
+                          <uni-view data-v-6582d7dc="" class="footer-outer">
+                                <uni-view data-v-6582d7dc="" class="footer-inside b-fontw">
+                              </uni-text></uni-view></uni-view></uni-view></uni-view></uni-view>
+                              <uni-view data-v-6582d7dc="" class="signIn-box b-card">
+                              <uni-view data-v-6582d7dc="" class="signIn-heard">
+            <uni-view class="title">
+            <uni-view class="title-today b-fontw">betflixblink แจกเครดิตฟรี
+            <uni-text  style="color: rgb(0, 198, 87); margin: 1px 3px;">
+                  <span>30</span></uni-text> บาท</uni-view>
+                        
+      <uni-view data-v-6582d7dc="" class="title-tomorrow">เพียงแชร์กลุ่มไลน์ให้ครบ 7 กลุ่ม
+            </uni-view></uni-view></uni-view>
+                  <uni-view data-v-6582d7dc="" class="signIn-content b-flex-space">
+                        
+                        <uni-view data-v-6582d7dc="" class="item">
+      <uni-view data-v-6582d7dc="" class="b-flex-space"><uni-view data-v-6582d7dc="" class="item item-flex card card-check">
+            <uni-text data-v-6582d7dc="" class="title"><span>แชร์ครั้งที่ 1</span></uni-text>
+            <uni-image data-v-6582d7dc="" class="img">
+                  <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-money.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+                  </div>
+                  <!---->
+                  <img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false">
+            </uni-image>
+            <uni-text data-v-6582d7dc="" class="describe">
+                  <span>รออนุมัติ</span></uni-text></uni-view>
+                  <uni-view data-v-6582d7dc="" class="item item-flex card">
+                        <uni-text data-v-6582d7dc="" class="title">
+                              <span>แชร์ครั้งที่ 2</span></uni-text>
+                              <uni-image data-v-6582d7dc="" class="img">
+                                    <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-money.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+                                    </div>
+                                    <!---->
+                                    <img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false"></uni-image>
+                                    <uni-text data-v-6582d7dc="" class="describe">
+                                          <span>กดรับสิทธิ์</span></uni-text></uni-view></uni-view><uni-view data-v-6582d7dc="" class="b-flex-space"><uni-view data-v-6582d7dc="" class="item item-flex card"><uni-text data-v-6582d7dc="" class="title"><span>แชร์ครั้งที่ 5</span></uni-text><uni-image data-v-6582d7dc="" class="img"><div style="background-image: url(&quot;https://zhoukaiwen.com/img/clockImg/icon-money.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----><img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false"></uni-image><uni-text data-v-6582d7dc="" class="describe"><span>10金币</span></uni-text></uni-view><uni-view data-v-6582d7dc="" class="item item-flex card"><uni-text data-v-6582d7dc="" class="title"><span>แชร์ครั้งที่ 6</span></uni-text><uni-image data-v-6582d7dc="" class="img"><div style="background-image: url(&quot;https://zhoukaiwen.com/img/clockImg/icon-money.png&quot;); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div><!----><img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false"></uni-image>
+            <uni-text data-v-6582d7dc="" class="describe"><span>กดรับสิทธิ์</span></uni-text></uni-view></uni-view></uni-view><uni-view data-v-6582d7dc="" class="item"><uni-view data-v-6582d7dc="" class="b-flex-space"><uni-view data-v-6582d7dc="" class="item item-flex card"><uni-text data-v-6582d7dc="" class="title"><span>แชร์ครั้งที่ 3</span>
+            </uni-text><uni-image data-v-6582d7dc="" class="img">
+                  <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-money.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
+                  <!---->
+                                                
+                  <img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false">
+            </uni-image><uni-text data-v-6582d7dc="" class="describe"><span>กดรับสิทธ์</span>
+            </uni-text></uni-view><uni-view data-v-6582d7dc="" class="item item-flex card"><uni-text data-v-6582d7dc="" class="title"><span>แชร์ครั้งที่ 4</span></uni-text><uni-image data-v-6582d7dc="" class="img"><div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-money.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
+                  <!---->
+                  <img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false"></uni-image><uni-text data-v-6582d7dc="" class="describe"><span>กดรับสิทธิ์</span></uni-text></uni-view></uni-view>
+                  
+                  <uni-view data-v-6582d7dc="" class="b-flex-space">
+                        <uni-view data-v-6582d7dc="" class="card" style="width: 100%; display: flex; justify-content: space-between;"><uni-view data-v-6582d7dc="" style="display: flex; flex-direction: column;"><uni-text data-v-6582d7dc="" class="title"><span>แชร์ครั้งที่ 7</span></uni-text><uni-text data-v-6582d7dc="" class="describe"><span>เย้ สำเร็จภารกิจแล้ว</span></uni-text></uni-view>
+                  <uni-image data-v-6582d7dc="" class="img" style="width: 60px; height: 55px; margin-top: 10px;"><div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-gift.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
+                   
+      <img src="https://zhoukaiwen.com/img/clockImg/icon-gift.png" draggable="false"></uni-image>
+</uni-view>
+                  </uni-view></uni-view>
+            </uni-view></uni-view>
+            <uni-view data-v-6582d7dc="" class="task-box b-card"><uni-view data-v-6582d7dc="" class="title b-fontw">ภารกิจรายวัน</uni-view><uni-view data-v-6582d7dc="" class="task-item b-flex-space">
+                  <uni-view data-v-6582d7dc="" class="task-item-left b-flex-space">
+                        <uni-image data-v-6582d7dc="" class="task-item-icon">
+      <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-signs.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
+                         
+<img src="https://zhoukaiwen.com/img/clockImg/icon-signs.png" draggable="false"></uni-image>
+<uni-view data-v-6582d7dc="" class="task-item-describe">
+  <uni-view data-v-6582d7dc="" class="title b-fontw">
+      ฝากครบ 5 วัน รับเครดิตฟรีทันที</uni-view>
+      <uni-view data-v-6582d7dc="" class="text">เฉพาะสมาขิกเก่า ที่ฝากบิลละ100บาทขั้นไปนะคะ</uni-view>
+</uni-view></uni-view>
+<uni-view data-v-6582d7dc="" class="task-item-btn">
+
+      <uni-image data-v-6582d7dc="" class="img">
+            <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-money.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+            </div>
+            <img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false">
+      </uni-image>+100 ฿</uni-view></uni-view>
+      <uni-view data-v-6582d7dc="" class="task-item b-flex-space">
+            <uni-view data-v-6582d7dc="" class="task-item-left b-flex-space">
+                  <uni-image data-v-6582d7dc="" class="task-item-icon">
+                        <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-signs.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
+                    
+                        <img src="https://zhoukaiwen.com/img/clockImg/icon-signs.png" draggable="false"></uni-image>
+            <uni-view data-v-6582d7dc="" class="task-item-describe"><uni-view data-v-6582d7dc="" class="title b-fontw">ฝากครั้งแรก29บาทรับ129บาท</uni-view><uni-view data-v-6582d7dc="" class="text">สำหรับสมาชิกใหม่ที่ฝากเงินครั้งแรก</uni-view></uni-view>
+                  </uni-view>
+      <uni-view data-v-6582d7dc="" class="task-item-btn">
+            <uni-image data-v-6582d7dc="" class="img">
+      <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-money.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+      </div>
+   
+      <img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false">
+</uni-image>+129 ฿</uni-view></uni-view>
+      <uni-view data-v-6582d7dc="" class="task-item b-flex-space">
+            <uni-view data-v-6582d7dc="" class="task-item-left b-flex-space">
+                  <uni-image data-v-6582d7dc="" class="task-item-icon">
+                        <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-takeOut.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+                        </div>
+                        <!---->
+                        <img src="https://zhoukaiwen.com/img/clockImg/icon-takeOut.png" draggable="false">
+                  </uni-image>
+                  <uni-view data-v-6582d7dc="" class="task-item-describe">
+            <uni-view data-v-6582d7dc="" class="title b-fontw">ฝาก 500ครบ3บิล รับเงินสดทันที 50 บาท</uni-view>
+            <uni-view data-v-6582d7dc="" class="text">ยอดฝากที่รับกิจกรรมนี้ ได้เป็นเงินสดเข้าบช.นะคะ</uni-view></uni-view>
+      </uni-view>
+      <uni-view data-v-6582d7dc="" class="task-item-btn">
+            <uni-image data-v-6582d7dc="" class="img">
+                  <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-money.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+                  </div>
+            <img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false"></uni-image>+50 ฿</uni-view></uni-view>
+      
+      <uni-view data-v-6582d7dc="" class="task-item b-flex-space">
+            <uni-view data-v-6582d7dc="" class="task-item-left b-flex-space">
+                  <uni-image data-v-6582d7dc="" class="task-item-icon">
+      <div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-since.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;">
+                  </div>
+                  <img src="https://zhoukaiwen.com/img/clockImg/icon-since.png" draggable="false">
+            </uni-image><uni-view data-v-6582d7dc="" class="task-item-describe">
+                  <uni-view data-v-6582d7dc="" class="title b-fontw">สุขสัต์วันหวยออก แจกคนละ 500บาท</uni-view>
+                  <uni-view data-v-6582d7dc="" class="text">สำหรับสมาชิกที่มีเลขท้าย 3ตัวตรงกับรางวัลที่ 1</uni-view></uni-view></uni-view>
+                  <uni-view data-v-6582d7dc="" class="task-item-btn">
+                        <uni-image data-v-6582d7dc="" class="img"><div style="background-image: url(https://zhoukaiwen.com/img/clockImg/icon-money.png); background-position: 0% 0%; background-size: 100% 100%; background-repeat: no-repeat;"></div>
+                        <img src="https://zhoukaiwen.com/img/clockImg/icon-money.png" draggable="false"></uni-image>+500 ฿</uni-view>
+            </uni-view></uni-view>
+      </uni-view></uni-page-body></uni-page-wrapper></uni-page>
+  
+      <uni-actionsheet><div class="uni-mask uni-actionsheet__mask" style="display: none;">
+      </div>
+      <div class="uni-actionsheet">
+            <div class="uni-actionsheet__menu">
+            
+                  <div style="max-height: 260px; overflow: hidden;"><div style="transform: translateY(0px) translateZ(0px);"></div></div></div>
+      <div class="uni-actionsheet__action">
+            <div class="uni-actionsheet__cell" style="color: rgb(0, 0, 0);"> Cancel </div>
+      </div><div></div></div>
+  
+</uni-actionsheet><uni-modal style="display: none;">
+      <div class="uni-mask"></div>
+      <div class="uni-modal">
+            <div class="uni-modal__bd"></div>
+            <div class="uni-modal__ft">
+            <div class="uni-modal__btn uni-modal__btn_default" style="color: rgb(0, 0, 0);"> Cancel 
+            </div>
+            <div class="uni-modal__btn uni-modal__btn_primary" style="color: rgb(0, 122, 255);"> OK 
+            </div></div></div>
+            <!---->
+      </uni-modal>
+      <!----><!---->
+</uni-app>
+ 
+  </body></html>
